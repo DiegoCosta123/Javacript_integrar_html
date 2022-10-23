@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clicar Button</title>
+    </head>
+    <body>
+       
+       <!-- <h1 id="resultado"></h1>
+
+        <script>
+
+            Exemplo:
+
+            //prompt(label: string, valorPadrao: string)
+
+            const result = document.getElementById("resultado");
+
+            const primeiroNumero = Number(prompt("Digite um número:"));
+            const segundoNumero = Number(prompt("Digite segundo número:"));
+
+            if(segundoNumero ==  0) {
+                // Se o segundo número for igual a 0, retorna uma mensagem dizendo não ser possível
+                result.textContent = "Não é possível dividir por 0";
+                
+            }  else {
+                // se o segundoNumero for diferente de 0, faz a divisão
+                const divisao = primeiroNumero / segundoNumero;                
+                result.textContent = divisao;
+            }
+
+        </script> -->
+
+            <!-- 
+                cria uma função aí que calcula a área do triângulo
+                usando o prompt
+                no caso, coloca um botão
+                e quando clicar nele, o prompt abre pedindo os campos
+                Para calcular área de um triângulo qualquer, o método mais comum é multiplicar o comprimento da base e da altura e dividir por dois. 
+            -->
+
+            <!-- 
+                um botão na tela
+                ele só vai servir para começar abrindo o prompt
+                pq se não, toda vez q vc abrir a tela, já vai aparecer o prompt
+                coloca a lógica dentro de uma função de click para iniciar somente ao clicar 
+            -->
+
+
+            <!-- <h1 id="titleCalc"></h1>
+
+            <button id="buttonClick">Clicar</button>
+
+        <script>
+
+            const title = document.getElementById("titleCalc");
+
+            const button = document.getElementById("buttonClick").addEventListener("click", () => {
+
+                const b = Number(prompt("Digite um número da Base:"));
+                const h = Number(prompt("Digite um número de Altura:"));
+
+                const A = (b * h) / 2;
+
+                title.textContent = A + " cm²";
+            })
+
+        </script> -->
+
+
+            <!-- 
+                vc vai fazer bhaskara
+                equação de 2 grau
+                vc vai mostrar na tela o x1 e o x2
+                se o Delta não for uma raíz perfeita, tem que mostrar na tela tbm 
+            -->
+
+
+            <h1 id="titleBhaskara1"></h1>
+            <h1 id="titleBhaskara2"></h1>
+            <button id="buttonClick">Clicar</button>
+
+            <script>
+
+                const title1 = document.getElementById("titleBhaskara1");
+                const title2 = document.getElementById("titleBhaskara2");
+
+                const button = document.getElementById("buttonClick").addEventListener("click", () => {
+                    
+                    const a = Number(prompt("Digite um número de 'a':"));
+                    const b = Number(prompt("Digite um número de 'b':"));
+                    const c = Number(prompt("Digite um número de 'c':"));
+                    
+                    const potency = b ** 2;
+                    const delta = potency - 4 * a * c;
+                    const raizDelta = Math.sqrt(delta);
+                    
+                    if(raizDelta > 0 && raizDelta % 1 === 0) {
+                        const X1 = (-b + raizDelta) / (2 * a);
+                        const X2 = (-b - raizDelta) / (2 * a);
+                        
+                        title1.textContent = "X1 = " + X1;
+                        title2.textContent = "X2 = " + X2;
+                    }
+                    else {
+                        title1.textContent = "Raiz perfeita inexistente";
+                    }
+                    
+                })
+
+            </script>
+
+    </body>
+</html>
+
